@@ -49,13 +49,15 @@ register() - Registers a new user with initial points
 
 createListing(description) - Posts a new listing
 
-initiateTrade(listingId) - Initiates trade on another user's listing
+listItem(listingId) - Initiates trade on another user's listing
 
-acceptTrade(tradeId) - Owner of listing accepts a trade
+buyItem(tradeId) - Another user accepts the trade
 
-completeTrade(tradeId) - Either party completes the trade
+balances(walletAddress) - Shows Balance
 
-cancelTrade(tradeId) - One or both parties cancel trade
+getAllItems() - shows all listed items
+
+itemCount() - tells how many items are listed
 
 
 
