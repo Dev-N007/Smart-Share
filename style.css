@@ -4,6 +4,21 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+body{
+    background-image:url("./images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+nav{
+    border-bottom:2px solid transparent;
+    border-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%) 1;
+    color: white;
+    background-color:rgb(35, 35, 35);
+    position: sticky;
+    top: 0;
+}
 #nav-list{
     list-style: none;
     padding: 1em;
@@ -11,7 +26,7 @@
 }
 nav a{
     text-decoration: none;
-    color: black;
+    color: white
 }
 #nav-list a:hover{
     color: rgb(88, 85, 85);
@@ -20,9 +35,7 @@ nav a{
 #hero-section{
     padding: 1rem;
     height: 95vh;
-    background-image:url("./images/bg.jpg");
-    background-size: cover;
-    background-position: center;
+   
     color: white;
 }
 #hero-section p{
@@ -40,4 +53,48 @@ nav a{
     background-color: rgb(49, 93, 187);
     cursor: pointer;
     transform: scale(1.1);
+}
+.featured{
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.holder{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.holder h2{
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+.holder p{
+    color: white;
+    margin-bottom: 10px;
+}
+.holder ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.holder ul li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+.holder button{
+    background-color: #007bff;
+    color: #fff;
+}
+.holder button:hover{
+    background-color: #0056b3; 
 }
