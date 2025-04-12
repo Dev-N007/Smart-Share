@@ -121,11 +121,11 @@ Developers:
 
 NILESH RAJ: UI/UX (frontend)
 
-ABHINAV KUMAR RAI: Documentation, Presentation and Database
+ABHINAV KUMAR RAI: Documentation, Presentation and Backend
 
 ABHIJEET ANAND: Blockchain
 
-TARUN KHATOD: Database
+TARUN KHATOD: Backend
 
 
 
