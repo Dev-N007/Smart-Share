@@ -77,9 +77,7 @@ Dispute Resolution: No integrated resolution for trade disputes.
 UI Simplicity: Simple and experimental — future versions can add more visuals, media uploads, and user ratings.
 
 
-License
 
-MIT
 
 Contributors
 
@@ -97,4 +95,3 @@ Future Ideas
 Reputation system
 Chat between users
 File uploads for listing images
-Layer 2 or off-chain transactions to lower fees
