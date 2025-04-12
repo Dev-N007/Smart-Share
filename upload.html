@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Item</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            margin-top: 100px;
+            width: 40vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(45, 45, 45, 0.5);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: start;
+            height: 70vh;
+        }
+        .form-group{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-holder{
+            text-align: center;
+        }
+        input,select{
+            margin: 1rem;
+            padding: 1rem;
+            min-width: 20vw;
+            height: 25px;
+            border-radius: 20px;
+
+        }
+        textarea{
+            margin: 1rem;
+            padding: 1rem;
+            width: 20vw;
+        }
+        .btn-holder{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .btn-holder .btn{
+            background-color: rgb(32, 98, 164);
+            border-image: none;
+            color: white;
+        }
+        .btn-holder .btn:hover{
+            background-color: rgb(31, 80, 169);
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex space-around center-cross">
+        <div id="logo">Smart Share</div>
+        <ul id="nav-list" class="flex space-around baseline">
+            <a href="index.html"><li>Home</li></a>
+            <a href="explore.html"><li>Explore Listings</li></a>
+            <a href="upload.html"><li>Create Listings</li></a>
+            <a href="dashboard.html"><li>Dashboard</li></a>
+        </ul>
+        <div id="wallet">
+            <button class="btn" ><span>Connect Wallet</span></button>
+        </div>
+    </nav>
+    <div class="container">
+        <center><h2>Upload Your Item</h2></center>
+        <form>
+            <div class="form-group">
+                <label for="item-name">Item Name</label>
+                <input type="text" id="item-name" name="item-name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="goods">Goods</option>
+                    <option value="services">Services</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="btn-holder">
+                <center><button type="submit" class="btn">Submit</button></center>
+            </div>
+        </form>
+    </div>
+    <footer id="footer">
+        <div id="foot-main">
+            <div class="foot-sec">
+                <h3 class="foothead">Quick Links</h3>
+                <ul id="foot-nav-list">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="explore.html"><li>Explore Listings</li></a>
+                    <a href="upload.html.html"><li>Create Listings</li></a>
+                    <a href="dashboard.html"><li>Dashboard</li></a>
+                </ul>
+            </div>
+            <div class="foot-sec">
+                <h3 class="foothead">Follow Us</h3>
+                <ul id="social-links">
+                    <a href=""><li><img src="./images/fb.svg" height="35px"></li></a>
+                    <a href=""><li><img src="./images/insta.svg" height="35px"></li></a>
+                    <a href=""><li><img src="./images/reddit.svg" height="35px"></li></a>
+                </ul>
+            </div>
+            <div class="foot-sec">
+                <h3 class="foothead">Contact Us</h3>
+                <ul style="list-style: none;">
+                    <li>Email: <br>SmartShare@gmail.com</li>
+                    <li>Phone: <br>+91 123 456 7890</li>
+                </ul>
+            </div>
+        </div>
+        <div id="foot-aside">
+            <p>© Copyright & Terms of Use </p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
