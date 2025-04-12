@@ -3,30 +3,152 @@
   <head>
     <meta charset="UTF-8">
     <title>Explore</title>
-    <link rel="stylesheet" href="utils.css">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      main{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-gap: 20px;
+        justify-items: center;
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <nav data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000" class="flex space-around center-cross">
-        <div id="logo">Smart Share</div>
-        <ul id="nav-list" class="flex space-around baseline">
-            <a href="index.html"><li>Home</li></a>
-            <a href="index.html"><li>Listings</li></a>
-            <a href="dashboard.html"><li>Dashboard</li></a>
-            <a href="index.html"><li>About</li></a>
-        </ul>
-        <div id="wallet">
-            <button class="btn" ><span>Connect Wallet</span></button>
-        </div>
+    <nav data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="flex space-around center-cross">
+      <div id="logo">Smart Share</div>
+      <ul id="nav-list" class="flex space-around baseline">
+          <a href="index.html"><li>Home</li></a>
+          <a href="index.html"><li>Listings</li></a>
+          <a href="dashboard.html"><li>Dashboard</li></a>
+          <a href="index.html"><li>About</li></a>
+      </ul>
+      <div id="wallet">
+          <button class="btn" ><span>Connect Wallet</span></button>
+      </div>
     </nav>
-    <main class="container">
+    <div>
       <h1>Explore Listings</h1>
-      <input type="text" id="search" placeholder="Search...">
-      <div id="listingsContainer" class="listings"></div>
+        <input type="text" id="search" placeholder="Search...">
+        <div id="listingsContainer" class="listings"></div>
+    </div>
+    <main class="container">
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
+      <div class="holder" >
+        <h2>Guitar</h2>
+        <p>Duration: 7 Days</p>
+        <p>Price: 100 Barts</p>
+        <p>Listed: Today</p>
+        <p>Available: Yes</p>
+        <p>By: User1</p>
+        <button class="btn"><span>Initiate</span></button>
+      </div>
     </main>
+    <footer id="footer">
+      <div id="foot-main">
+          <div class="foot-sec">
+              <h3 class="foothead">Quick Links</h3>
+              <ul id="foot-nav-list">
+                  <a href=""><li>Home</li></a>
+                  <a href=""><li>Listings</li></a>
+                  <a href=""><li>Dashboard</li></a>
+                  <a href=""><li>About</li></a>
+              </ul>
+          </div>
+          <div class="foot-sec">
+              <h3 class="foothead">Follow Us</h3>
+              <ul id="social-links">
+                  <a href=""><li><img src="./images/fb.svg" height="35px"></li></a>
+                  <a href=""><li><img src="./images/insta.svg" height="35px"></li></a>
+                  <a href=""><li><img src="./images/reddit.svg" height="35px"></li></a>
+              </ul>
+          </div>
+          <div class="foot-sec">
+              <h3 class="foothead">Contact Us</h3>
+              <ul style="list-style: none;">
+                  <li>Email: <br>SmartShare@gmail.com</li>
+                  <li>Phone: <br>+91 123 456 7890</li>
+              </ul>
+          </div>
+      </div>
+      <div id="foot-aside">
+          <p>© Copyright & Terms of Use </p>
+      </div>
+  </footer>
   </body>
 </html> 
