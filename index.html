@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="flex space-around">
+    <nav class="flex space-around center-cross">
         <div id="logo">Smart Share</div>
         <ul id="nav-list" class="flex space-around baseline">
             <a href="index.html"><li>Home</li></a>
@@ -16,13 +16,26 @@
             <a href="index.html"><li>My Activity</li></a>
             <a href="index.html"><li>Wallet</li></a>
         </ul>
-        <div id="user-logo">
+        <div id="wallet">
             <a href="#">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd"/>
-                </svg> 
+                <figure>
+                    <img src="./images/wallet.svg" height="45px">
+                    <figcaption>Wallet</figcaption>
+                </figure>
             </a>
         </div>
     </nav>
+    <main id="hero-section" class="flex center-main center-cross column">
+        <h1>
+            Lend what you don't need. 
+            <br> 
+            <center>Borrow what you do.</center>
+        </h1>
+        <p>A Blockchain powered platform for sharing unused items and services</p>
+        <div class="btn-holder">
+            <button class="btn">Create Listings</button>
+            <button class="btn">Explore Listings</button>
+        </div>
+    </main>
 </body>
 </html>
