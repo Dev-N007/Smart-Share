@@ -53,15 +53,19 @@ nav a{
 .btn{
     margin: 1rem;
     padding:1rem 1.5rem;
-    border-radius: 8px;
-    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 8px; 
+    background-color:   rgba(61, 61, 61, 1);
+   
+}
+.btn span{
+    background: linear-gradient(43deg, #4159d0 0%, #C850C0 50%, #FFCC70 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-color:  rgb(182, 177, 177);
 }
 .btn:hover{
-    background-color: rgb(49, 93, 187);
     cursor: pointer;
+    border:2px solid transparent;
+    border-image: linear-gradient(43deg, #4159d0 0%, #C850C0 50%, #FFCC70 100%) 1;
     transform: scale(1.1);
 }
 .featured{
@@ -101,13 +105,7 @@ nav a{
     background-color: #f0f0f0;
     transform: scale(1.05);
 }
-.holder button{
-    background-color: #007bff;
-    color: #fff;
-}
-.holder button:hover{
-    background-color: #0056b3; 
-}
+
 footer{
     margin-top: 10vh;
     margin-right: auto;
