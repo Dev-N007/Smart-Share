@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Explore</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <nav data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000" class="flex space-around center-cross">
+        <div id="logo">Smart Share</div>
+        <ul id="nav-list" class="flex space-around baseline">
+            <a href="index.html"><li>Home</li></a>
+            <a href="index.html"><li>Listings</li></a>
+            <a href="dashboard.html"><li>Dashboard</li></a>
+            <a href="index.html"><li>About</li></a>
+        </ul>
+        <div id="wallet">
+            <button class="btn" ><span>Connect Wallet</span></button>
+        </div>
+    </nav>
+    <main class="container">
+      <h1>Explore Listings</h1>
+      <input type="text" id="search" placeholder="Search...">
+      <div id="listingsContainer" class="listings"></div>
+    </main>
+  </body>
+</html> 
