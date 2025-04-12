@@ -6,6 +6,8 @@
     <title>Smart Share</title>
     <link rel="stylesheet" href="utils.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="flex space-around center-cross">
@@ -13,30 +15,30 @@
         <ul id="nav-list" class="flex space-around baseline">
             <a href="index.html"><li>Home</li></a>
             <a href="index.html"><li>Listings</li></a>
-            <a href="index.html"><li>Dashboard</li></a>
+            <a href="dashboard.html"><li>Dashboard</li></a>
             <a href="index.html"><li>About</li></a>
         </ul>
         <div id="wallet">
-            <a href="#">
-                <figure>
-                    <img src="./images/wallet.svg" height="45px">
-                    <figcaption>Wallet</figcaption>
-                </figure>
-            </a>
+            <button class="btn" >Connect Wallet</button>
         </div>
     </nav>
-    <main id="hero-section" class="flex center-main center-cross column">
-        <h1>
-            Lend what you don't need. 
-            <br> 
-            <center>Borrow what you do.</center>
-        </h1>
-        <p>A Blockchain powered platform for sharing unused items and services</p>
-        <div class="btn-holder">
-            <button class="btn">Create Listings</button>
-            <button class="btn">Explore Listings</button>
-        </div>
-    </main>
+    <div class="flex space-around center-cross">
+        <main id="hero-section" class="flex center-main center-cross column">
+            <h1 >
+                Lend what you don't need. 
+                <br> 
+                <center style="font-family: 'Russo One',sans-serif;">Borrow what you do.</center>
+            </h1>
+            <p>A Blockchain powered platform for sharing unused items and services</p>
+            <div class="btn-holder">
+                <button class="btn">Create Listings</button>
+                <button class="btn">Explore Listings</button>
+            </div>
+        </main>
+        <aside>
+            <img src="./images/hero.png" alt="Hero Image" height="500px">
+        </aside>
+    </div>
     <h1><center>Featured Listings</center></h1>
     <section class="featured">
         <div class="holder">
@@ -72,7 +74,6 @@
                     <a href=""><li>About</li></a>
                 </ul>
             </div>
-            
             <div class="foot-sec">
                 <h3 class="foothead">Follow Us</h3>
                 <ul id="social-links">
