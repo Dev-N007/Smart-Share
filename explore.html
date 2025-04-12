@@ -10,33 +10,30 @@
     <link rel="stylesheet" href="style.css">
     <style>
       main{
+        margin-top: 100px;
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
         grid-gap: 20px;
         justify-items: center;
+        align-content: center;
         padding: 20px;
       }
     </style>
   </head>
   <body>
-    <nav data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="flex space-around center-cross">
+    <nav class="flex space-around center-cross">
       <div id="logo">Smart Share</div>
       <ul id="nav-list" class="flex space-around baseline">
           <a href="index.html"><li>Home</li></a>
-          <a href="index.html"><li>Listings</li></a>
+          <a href="explore.html"><li>Explore Listings</li></a>
+          <a href="index.html"><li>Create Listings</li></a>
           <a href="dashboard.html"><li>Dashboard</li></a>
-          <a href="index.html"><li>About</li></a>
       </ul>
       <div id="wallet">
           <button class="btn" ><span>Connect Wallet</span></button>
       </div>
     </nav>
-    <div>
-      <h1>Explore Listings</h1>
-        <input type="text" id="search" placeholder="Search...">
-        <div id="listingsContainer" class="listings"></div>
-    </div>
-    <main class="container">
+    <main data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="container">
       <div class="holder" >
         <h2>Guitar</h2>
         <hr>
@@ -133,10 +130,10 @@
           <div class="foot-sec">
               <h3 class="foothead">Quick Links</h3>
               <ul id="foot-nav-list">
-                  <a href=""><li>Home</li></a>
-                  <a href=""><li>Listings</li></a>
-                  <a href=""><li>Dashboard</li></a>
-                  <a href=""><li>About</li></a>
+                <a href="index.html"><li>Home</li></a>
+                <a href="explore.html"><li>Explore Listings</li></a>
+                <a href="index.html"><li>Create Listings</li></a>
+                <a href="dashboard.html"><li>Dashboard</li></a>
               </ul>
           </div>
           <div class="foot-sec">
@@ -159,5 +156,9 @@
           <p>© Copyright & Terms of Use </p>
       </div>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
   </body>
 </html> 
