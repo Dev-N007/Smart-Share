@@ -8,7 +8,7 @@ body{
     background-image:url("./images/bg.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: sticky;
+    background-attachment: sticky; 
     color: white;
 }
 h1,h2,h3,h4,h5,h6{
@@ -31,19 +31,19 @@ nav{
 #nav-list{
     list-style: none;
     padding: 1em;
-    width: 50vw;
+    width: 40vw;
 }
 nav a{
     text-decoration: none;
     color: white
 }
 #nav-list a:hover{
-    color: rgb(88, 85, 85);
+  
     transform: scale(1.1);
 }
 #hero-section{
     margin-right: 2rem;
-    height: 95vh;
+    height: 100vh;
     align-items: space-around;
     color: white;
 }
@@ -63,19 +63,19 @@ nav a{
     margin: 1rem;
     padding:1rem 1.5rem;
     border-radius: 8px; 
-    background-color:   rgba(61, 61, 61, 1);
+    background-color:   rgba(61, 61, 61, 0.2);
     border: 0px;
+    border:2px solid transparent;
+    border-image: linear-gradient(43deg, #4159d0 0%, #C850C0 50%, #FFCC70 100%) 1;
 }
 .btn span{
-    background: linear-gradient(90deg, #4159d0 0%, #C850C0 50%, #FFCC70 100%);
+    background: linear-gradient(45deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%) ;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: bolder;
 }
 .btn:hover{
     cursor: pointer;
-    border:1px solid transparent;
-    border-image: linear-gradient(43deg, #4159d0 0%, #C850C0 50%, #FFCC70 100%) 1;
 
 }
 .featured{
@@ -90,18 +90,24 @@ nav a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255,255,255,0.2);
-    border: 1px solid transparent;
+    background: rgba(35,35,35,0.8);
+    border: 2px solid transparent;
     border-radius: 8px;
     min-width: 250px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
+hr{
+    border:1px solid transparent;
+    width: 100%;
+    border-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%) 1;
+}
+
 .holder h2{
     font-weight: 300;
     color: white;
     margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,0,1);
 }
 .holder p{
     color: white;
