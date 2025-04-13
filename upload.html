@@ -18,8 +18,8 @@
         }
         .container{
             margin-top: 100px;
-            width: 40vw;
-            height: 80vh;
+            width: 50vw;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,7 +31,7 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: start;
-            height: 70vh;
+            height: 80vh;
         }
         .form-group{
             width: 100%;
@@ -45,15 +45,13 @@
         input,select{
             margin: 1rem;
             padding: 1rem;
-            min-width: 20vw;
-            height: 25px;
+            min-width: 30vw;
             border-radius: 20px;
-
         }
         textarea{
             margin: 1rem;
             padding: 1rem;
-            width: 20vw;
+            width: 30vw;
         }
         .btn-holder{
             width: 100%;
@@ -100,29 +98,31 @@
     </nav>
     <div class="container">
         <center><h2>Upload Your Item</h2></center>
-        <form>
+        <form id="form">
             <div class="form-group">
                 <label for="item-name">Item Name</label>
                 <input type="text" id="item-name" name="item-name" required>
             </div>
             <div class="form-group">
+                <label for="size">Item Size</label>
+                <select id="size" name="size" required onchange="setPrice(this.value)">
+                    <option value="">Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="price">Price</label>
-                <input type="text" id="price" name="price" required>
+                <input type="text" id="price" name="price" readonly>
             </div>
             <div class="form-group">
                 <label for="duration">Duration</label>
                 <input type="text" id="duration" name="duration" required>
             </div>
             <div class="form-group">
-                <label for="category">Category</label>
-                <select id="category" name="category" required>
-                    <option value="goods">Goods</option>
-                    <option value="services">Services</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+                <textarea id="description" name="description" rows="4"></textarea>
             </div>
             <div class="btn-holder">
                 <center><button type="submit" class="btn">Submit</button></center>
@@ -159,10 +159,50 @@
         <div id="foot-aside">
             <p>© Copyright & Terms of Use </p>
         </div>
-    </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+            function setPrice(size){
+                price=document.getElementById("price");
+                switch (size){
+                    case "small":
+                    price.value=10;
+                    break;
+                    case "medium":
+                    price.value=25;
+                    break;
+                    case "large":
+                    price.value=50;
+                    break;
+                    default:
+                    price.value=null;
+                }
+            }
+            document.getElementById("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const item = {
+              name: document.getElementById("item-name").value,
+              duration: document.getElementById("duration").value,
+              price: document.getElementById("price").value,
+              listed: new Date().toDateString,
+              available: "Yes",
+              user: "ABC"
+            };
+            if (localStorage.getItem("itemList")){
+                itemList=JSON.parse(localStorage.getItem("itemList"));
+            }
+            else{
+                let itemList=[];
+            }
+            itemList.push(item);
+            localStorage.setItem("itemList", JSON.stringify(itemList));
+
+            window.location.href = "explore.html";
+
+        });
     </script>
 </body>
 </html>

@@ -157,8 +157,32 @@
       </div>
   </footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
+  <script>
+      AOS.init();
+  </script>
+  <script defer>
+      const itemList= JSON.parse(localStorage.getItem("itemList"));
+      itemList.forEach(itemData=>{
+        if (itemData) {
+          container = document.getElementsByClassName("container")[0];
+          holder=document.createElement("div");
+          holder.classList.add("holder");
+          holder.innerHTML=
+          `
+          <h2>${itemData.name}</h2>
+          <hr>
+          <p>Duration: ${itemData.duration}</p>
+          <p>Price: ${itemData.price}</p>
+          <p>Listed: ${itemData.listed}</p>
+          <p>Available: ${itemData.available}</p>
+          <p>By: ${itemData.user}</p>
+          <button class="btn"><span>Initiate</span></button>
+          `;
+          container.insertBefore(holder,container.firstChild);
+    
+        }
+      });
+      
     </script>
   </body>
 </html> 
