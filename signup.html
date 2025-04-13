@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
+    
+</head>
+<body>
+    <main>
+        <div id="heading">
+            <p>Create An Account Or Log In To Get Started</p>
+            <h1>Sign Up</h1>
+            <p>Enter Your Details</p>
+        </div>
+        <form action="/signup" method="post">
+            <label for="name">Your Name*</label>
+            <br><br>
+            <input type="text" id="name" class="inputbox" placeholder="Enter Your Name" required> 
+            <br><br>                                                                                                               
+            <label for="email">Your E-mail*</label>
+            <br><br>
+            <input type="email" id="email" class="inputbox" placeholder="Enter Your E-mail" required>
+            <br><br>
+            <label for="pwd">Your Password*</label>
+            <br><br>
+            <input type="password" id="pwd" class="inputbox" placeholder="Enter Your Password" required>
+            <br><br>
+            <div class="btn-holder">
+                <button class="btn"><span>Continue</span></button>
+            </div>
+        </form>
+        <p>Already have an account?<a href="login.html">Login Here</a></p>
+    </main>
+</body>
+</html>
