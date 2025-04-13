@@ -19,16 +19,13 @@ app.use(session({
 app.use(flash());
 
 // MongoDB Connection
-mongoose.connect('mongodb://127.0.0.1:27017/userAuthDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect('mongodb://127.0.0.1:27017/userAuthDB');
 
 // Mongoose Schema
 const userSchema = new mongoose.Schema({
   name: String,
   email: String,
-  password: String
+  pwd: String
 });
 
 const User = mongoose.model('User', userSchema);
@@ -38,36 +35,20 @@ app.get('/', (req, res) => {
   res.redirect('/signup.html');
 });
 
-app.get('/signup.html', (req, res) => {
-  const message = req.flash('error');
-  res.send(`
-    <!DOCTYPE html>
-    <html>
-      <head><meta http-equiv="refresh" content="0; URL=signup.html"></head>
-      <body>
-        ${message.length ? `<div class="flash error">${message[0]}</div>` : ''}
-      </body>
-    </html>
-  `);
+// API to expose flash messages
+app.get('/flash-messages', (req, res) => {
+  const messages = {
+    success: req.flash('success'),
+    error: req.flash('error')
+  };
+  res.json(messages);
 });
 
-app.get('/login.html', (req, res) => {
-  const message = req.flash('error');
-  res.send(`
-    <!DOCTYPE html>
-    <html>
-      <head><meta http-equiv="refresh" content="0; URL=login.html"></head>
-      <body>
-        ${message.length ? `<div class="flash error">${message[0]}</div>` : ''}
-      </body>
-    </html>
-  `);
-});
-
+// Signup logic
 app.post('/signup', async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, pwd } = req.body;
 
-  if (!name || !email || !password) {
+  if (!name || !email || !pwd) {
     req.flash('error', 'Please fill in all fields.');
     return res.redirect('/signup.html');
   }
@@ -78,25 +59,29 @@ app.post('/signup', async (req, res) => {
     return res.redirect('/signup.html');
   }
 
-  const newUser = new User({ name, email, password });
+  const newUser = new User({ name, email, pwd });
   await newUser.save();
 
-  req.flash('error', 'Signup successful! You can now log in.');
+  req.flash('success', 'Signup successful! You can now log in.');
   res.redirect('/login.html');
 });
 
+// Login logic
 app.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, pwd } = req.body;
 
   const user = await User.findOne({ email });
 
-  if (!user || user.password !== password) {
+  if (!user || user.pwd !== pwd) {
     req.flash('error', 'Invalid email or password.');
     return res.redirect('/login.html');
   }
 
-  req.flash('error', `Welcome back, ${user.name}!`);
-  res.redirect('/login.html');
+  req.flash('success', `Welcome back, ${user.name}!`);
+  
+  document.getElementById("log-sign").style.display="none";
+  document.getElementById("wallet").style.display="block";
+  res.redirect('/index.html');
 });
 
 // Start server
