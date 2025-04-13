@@ -79,9 +79,8 @@ app.post('/login', async (req, res) => {
 
   req.flash('success', `Welcome back, ${user.name}!`);
   
-  document.getElementById("log-sign").style.display="none";
-  document.getElementById("wallet").style.display="block";
-  res.redirect('/index.html');
+
+  res.redirect('/index1.html');
 });
 
 // Start server
