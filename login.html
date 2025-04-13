@@ -40,7 +40,7 @@
       <br><br>
       <label for="pwd">Your Password*</label>
       <br><br>
-      <input type="password" name="password" id="pwd" class="inputbox pwd" placeholder="Enter Your Password" required>
+      <input type="password" name="pwd" id="pwd" class="inputbox pwd" placeholder="Enter Your Password" required>
       <br><br>
       <div class="btn-holder">
         <button class="btn"><span>Continue</span></button>
@@ -51,14 +51,17 @@
   </main>
 
   <script>
-    fetch(window.location.href)
-      .then(res => res.text())
-      .then(html => {
-        const doc = new DOMParser().parseFromString(html, 'text/html');
-        const success = doc.querySelector('.flash.success')?.outerHTML;
-        const error = doc.querySelector('.flash.error')?.outerHTML;
-        document.getElementById('messages').innerHTML = success || error || '';
+    fetch('/flash-messages')
+      .then(res => res.json())
+      .then(data => {
+        const messagesDiv = document.getElementById('messages');
+        if (data.error.length) {
+          messagesDiv.innerHTML = `<div class="flash error">${data.error[0]}</div>`;
+        } else if (data.success.length) {
+          messagesDiv.innerHTML = `<div class="flash success">${data.success[0]}</div>`;
+        }
       });
   </script>
+  
 </body>
 </html>
