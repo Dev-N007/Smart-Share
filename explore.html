@@ -1,175 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Explore</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="utils.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-      main{
-        margin-top: 100px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
-        grid-gap: 20px;
-        justify-items: center;
-        align-content: center;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="flex space-around center-cross">
-      <div id="logo">Smart Share</div>
-      <ul id="nav-list" class="flex space-around baseline">
-          <a href="index.html"><li>Home</li></a>
-          <a href="explore.html"><li>Explore Listings</li></a>
-          <a href="upload.html"><li>Create Listings</li></a>
-          <a href="dashboard.html"><li>Dashboard</li></a>
-      </ul>
-      <div id="wallet">
-        <button class="btn" ><span>Connect Wallet</span></button>
-      </div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Explore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="utils.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+  <style>
+    main {
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-gap: 20px;
+      justify-items: center;
+      align-content: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="flex space-around center-cross">
+    <div id="logo">Smart Share</div>
+    <ul id="nav-list" class="flex space-around baseline">
+      <a href="index.html">
+        <li>Home</li>
+      </a>
+      <a href="explore.html">
+        <li>Explore Listings</li>
+      </a>
+      <a href="upload.html">
+        <li>Create Listings</li>
+      </a>
+      <a href="dashboard.html">
+        <li>Dashboard</li>
+      </a>
+    </ul>
+    <div id="wallet">
+      <button class="btn" onclick="connectWallet()"><span>Connect Wallet</span></button>
+    </div>
 
     </div>
-    </nav>
-    <main data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="container">
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
+  </nav>
+  <main data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="container">
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+    <div class="holder">
+      <h2>Guitar</h2>
+      <hr>
+      <p>Duration: 7 Days</p>
+      <p>Price: 100 Barts</p>
+      <p>Listed: Today</p>
+      <p>Available: Yes</p>
+      <p>By: User1</p>
+      <button class="btn"><span>Initiate</span></button>
+    </div>
+  </main>
+  <footer id="footer">
+    <div id="foot-main">
+      <div class="foot-sec">
+        <h3 class="foothead">Quick Links</h3>
+        <ul id="foot-nav-list">
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="explore.html">
+            <li>Explore Listings</li>
+          </a>
+          <a href="upload.html">
+            <li>Create Listings</li>
+          </a>
+          <a href="dashboard.html">
+            <li>Dashboard</li>
+          </a>
+        </ul>
       </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
+      <div class="foot-sec">
+        <h3 class="foothead">Follow Us</h3>
+        <ul id="social-links">
+          <a href="">
+            <li><img src="./images/fb.svg" height="35px"></li>
+          </a>
+          <a href="">
+            <li><img src="./images/insta.svg" height="35px"></li>
+          </a>
+          <a href="">
+            <li><img src="./images/reddit.svg" height="35px"></li>
+          </a>
+        </ul>
       </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
+      <div class="foot-sec">
+        <h3 class="foothead">Contact Us</h3>
+        <ul style="list-style: none;">
+          <li>Email: <br>SmartShare@gmail.com</li>
+          <li>Phone: <br>+91 123 456 7890</li>
+        </ul>
       </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-      <div class="holder" >
-        <h2>Guitar</h2>
-        <hr>
-        <p>Duration: 7 Days</p>
-        <p>Price: 100 Barts</p>
-        <p>Listed: Today</p>
-        <p>Available: Yes</p>
-        <p>By: User1</p>
-        <button class="btn"><span>Initiate</span></button>
-      </div>
-    </main>
-    <footer id="footer">
-      <div id="foot-main">
-          <div class="foot-sec">
-              <h3 class="foothead">Quick Links</h3>
-              <ul id="foot-nav-list">
-                <a href="index.html"><li>Home</li></a>
-                <a href="explore.html"><li>Explore Listings</li></a>
-                <a href="upload.html"><li>Create Listings</li></a>
-                <a href="dashboard.html"><li>Dashboard</li></a>
-              </ul>
-          </div>
-          <div class="foot-sec">
-              <h3 class="foothead">Follow Us</h3>
-              <ul id="social-links">
-                  <a href=""><li><img src="./images/fb.svg" height="35px"></li></a>
-                  <a href=""><li><img src="./images/insta.svg" height="35px"></li></a>
-                  <a href=""><li><img src="./images/reddit.svg" height="35px"></li></a>
-              </ul>
-          </div>
-          <div class="foot-sec">
-              <h3 class="foothead">Contact Us</h3>
-              <ul style="list-style: none;">
-                  <li>Email: <br>SmartShare@gmail.com</li>
-                  <li>Phone: <br>+91 123 456 7890</li>
-              </ul>
-          </div>
-      </div>
-      <div id="foot-aside">
-          <p>© Copyright & Terms of Use </p>
-      </div>
+    </div>
+    <div id="foot-aside">
+      <p>© Copyright & Terms of Use </p>
+    </div>
   </footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-      AOS.init();
+    AOS.init();
   </script>
   <script defer>
-      const itemList= JSON.parse(localStorage.getItem("itemList"));
-      itemList.forEach(itemData=>{
-        if (itemData) {
-          container = document.getElementsByClassName("container")[0];
-          holder=document.createElement("div");
-          holder.classList.add("holder");
-          holder.innerHTML=
+    const itemList = JSON.parse(localStorage.getItem("itemList"));
+    itemList.forEach(itemData => {
+      if (itemData) {
+        container = document.getElementsByClassName("container")[0];
+        holder = document.createElement("div");
+        holder.classList.add("holder");
+        holder.innerHTML =
           `
           <h2>${itemData.name}</h2>
           <hr>
@@ -180,11 +206,13 @@
           <p>By: ${itemData.user}</p>
           <button class="btn"><span>Initiate</span></button>
           `;
-          container.insertBefore(holder,container.firstChild);
-    
-        }
-      });
-      
-    </script>
-  </body>
-</html> 
+        container.insertBefore(holder, container.firstChild);
+
+      }
+    });
+
+  </script>
+  <script src="blockchain.js"></script>
+</body>
+
+</html>

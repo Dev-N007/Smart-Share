@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Item</title> 
+    <title>Upload Item</title>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="utils.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+
+
     <style>
-        body{
+        body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .container{
+
+        .container {
             margin-top: 100px;
             width: 50vw;
             height: 90vh;
@@ -26,74 +32,96 @@
             align-items: center;
             background-color: rgba(45, 45, 45, 0.5);
         }
-        form{
+
+        form {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: start;
             height: 80vh;
         }
-        .form-group{
+
+        .form-group {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .btn-holder{
+
+        .btn-holder {
             text-align: center;
         }
-        input,select{
+
+        input,
+        select {
             margin: 1rem;
             padding: 1rem;
             min-width: 30vw;
             border-radius: 20px;
         }
-        .btn-holder{
+
+        .btn-holder {
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .btn-holder .btn{
+
+        .btn-holder .btn {
             background-color: rgb(32, 98, 164);
             border-image: none;
             color: white;
         }
-        .btn-holder .btn:hover{
+
+        .btn-holder .btn:hover {
             background-color: rgb(31, 80, 169);
         }
-        @media (max-width:800px){
-            .container{
-               height: 100vh;
+
+        @media (max-width:800px) {
+            .container {
+                height: 100vh;
                 width: 100vw;
             }
-            .form-group{
+
+            .form-group {
                 flex-direction: column;
                 justify-content: center;
                 align-items: space-between;
                 padding: 2rem;
             }
-            label{
+
+            label {
                 padding: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <nav class="flex space-around center-cross">
         <div id="logo">Smart Share</div>
         <ul id="nav-list" class="flex space-around baseline">
-            <a href="index.html"><li>Home</li></a>
-            <a href="explore.html"><li>Explore Listings</li></a>
-            <a href="upload.html"><li>Create Listings</li></a>
-            <a href="dashboard.html"><li>Dashboard</li></a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="explore.html">
+                <li>Explore Listings</li>
+            </a>
+            <a href="upload.html">
+                <li>Create Listings</li>
+            </a>
+            <a href="dashboard.html">
+                <li>Dashboard</li>
+            </a>
         </ul>
         <div id="wallet">
-            <button class="btn" ><span>Connect Wallet</span></button>
+            <button class="btn" onclick="connectWallet()"><span>Connect Wallet</span></button>
         </div>
         </div>
     </nav>
     <div class="container">
-        <center><h2>Upload Your Item</h2></center>
+        <center>
+            <h2>Upload Your Item</h2>
+        </center>
         <form id="form">
             <div class="form-group">
                 <label for="item-name">Item Name</label>
@@ -126,18 +154,32 @@
             <div class="foot-sec">
                 <h3 class="foothead">Quick Links</h3>
                 <ul id="foot-nav-list">
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="explore.html"><li>Explore Listings</li></a>
-                    <a href="upload.html.html"><li>Create Listings</li></a>
-                    <a href="dashboard.html"><li>Dashboard</li></a>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="explore.html">
+                        <li>Explore Listings</li>
+                    </a>
+                    <a href="upload.html.html">
+                        <li>Create Listings</li>
+                    </a>
+                    <a href="dashboard.html">
+                        <li>Dashboard</li>
+                    </a>
                 </ul>
             </div>
             <div class="foot-sec">
                 <h3 class="foothead">Follow Us</h3>
                 <ul id="social-links">
-                    <a href=""><li><img src="./images/fb.svg" height="35px"></li></a>
-                    <a href=""><li><img src="./images/insta.svg" height="35px"></li></a>
-                    <a href=""><li><img src="./images/reddit.svg" height="35px"></li></a>
+                    <a href="">
+                        <li><img src="./images/fb.svg" height="35px"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="./images/insta.svg" height="35px"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="./images/reddit.svg" height="35px"></li>
+                    </a>
                 </ul>
             </div>
             <div class="foot-sec">
@@ -151,50 +193,52 @@
         <div id="foot-aside">
             <p>© Copyright & Terms of Use </p>
         </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script>
-            function setPrice(size){
-                price=document.getElementById("price");
-                switch (size){
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            function setPrice(size) {
+                price = document.getElementById("price");
+                switch (size) {
                     case "small":
-                    price.value=10;
-                    break;
+                        price.value = 10;
+                        break;
                     case "medium":
-                    price.value=25;
-                    break;
+                        price.value = 25;
+                        break;
                     case "large":
-                    price.value=50;
-                    break;
+                        price.value = 50;
+                        break;
                     default:
-                    price.value=null;
+                        price.value = null;
                 }
             }
-            document.getElementById("form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            const item = {
-              name: document.getElementById("item-name").value,
-              duration: document.getElementById("duration").value,
-              price: document.getElementById("price").value,
-              listed: new Date().toDateString,
-              available: "Yes",
-              user: "ABC"
-            };
-            if (localStorage.getItem("itemList")){
-                itemList=JSON.parse(localStorage.getItem("itemList"));
-            }
-            else{
-                let itemList=[];
-            }
-            itemList.push(item);
-            localStorage.setItem("itemList", JSON.stringify(itemList));
+            document.getElementById("form").addEventListener("submit", function (e) {
+                e.preventDefault();
 
-            window.location.href = "explore.html";
+                const item = {
+                    name: document.getElementById("item-name").value,
+                    duration: document.getElementById("duration").value,
+                    price: document.getElementById("price").value,
+                    listed: new Date().toDateString,
+                    available: "Yes",
+                    user: "ABC"
+                };
+                if (localStorage.getItem("itemList")) {
+                    itemList = JSON.parse(localStorage.getItem("itemList"));
+                }
+                else {
+                    let itemList = [];
+                }
+                itemList.push(item);
+                localStorage.setItem("itemList", JSON.stringify(itemList));
 
-        });
-    </script>
+                window.location.href = "explore.html";
+
+            });
+        </script>
+        <script src="blockchain.js"></script>
 </body>
+
 </html>

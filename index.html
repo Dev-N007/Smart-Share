@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,41 +10,55 @@
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="utils.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 
 </head>
+
 <body>
     <nav class="flex space-around center-cross">
         <div id="logo">Smart Share</div>
         <ul id="nav-list" class="flex space-around baseline">
-            <a href="index.html"><li>Home</li></a>
-            <a href="explore.html"><li>Explore Listings</li></a>
-            <a href="upload.html"><li>Create Listings</li></a>
-            <a href="dashboard.html"><li>Dashboard</li></a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="explore.html">
+                <li>Explore Listings</li>
+            </a>
+            <a href="upload.html">
+                <li>Create Listings</li>
+            </a>
+            <a href="dashboard.html">
+                <li>Dashboard</li>
+            </a>
         </ul>
         <div id="wallet">
-            <button class="btn" ><span>Connect Wallet</span></button>
+            <button class="btn" onclick="connectWallet()"><span>Connect Wallet</span></button>
         </div>
-        
+
     </nav>
     <div class="flex center-main center-cross" id="hero-holder">
-        <main data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" id="hero-section" class="flex center-main column">
-            <h1 >
+        <main data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" id="hero-section"
+            class="flex center-main column">
+            <h1>
                 <center style="font-family: 'Russo One',sans-serif;">Lend what you don't need. </center>
                 <center style="font-family: 'Russo One',sans-serif;">Borrow what you do.</center>
             </h1>
-            <p >A Blockchain powered platform for sharing unused items and services</p>
+            <p>A Blockchain powered platform for sharing unused items and services</p>
             <div class="btn-holder">
                 <a href="login.html"><button class="btn"><span>Login</span></button></a>
                 <a href="signup.html"><button class="btn"><span>Signup</span></button></a>
             </div>
         </main>
         <aside>
-            <img data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" src="./images/hero.png" alt="Hero Image" height="500px">
+            <img data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" src="./images/hero.png"
+                alt="Hero Image" height="500px">
         </aside>
     </div>
-    <center><h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Featured Listings</h1></center>
+    <center>
+        <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Featured Listings</h1>
+    </center>
     <section class="featured" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-        <div class="holder" >
+        <div class="holder">
             <h2>Guitar</h2>
             <hr>
             <p>Duration: 7 Days</p>
@@ -79,18 +94,32 @@
             <div class="foot-sec">
                 <h3 class="foothead">Quick Links</h3>
                 <ul id="foot-nav-list">
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="explore.html"><li>Explore Listings</li></a>
-                    <a href="upload.html"><li>Create Listings</li></a>
-                    <a href="dashboard.html"><li>Dashboard</li></a>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="explore.html">
+                        <li>Explore Listings</li>
+                    </a>
+                    <a href="upload.html">
+                        <li>Create Listings</li>
+                    </a>
+                    <a href="dashboard.html">
+                        <li>Dashboard</li>
+                    </a>
                 </ul>
             </div>
             <div class="foot-sec">
                 <h3 class="foothead">Follow Us</h3>
                 <ul id="social-links">
-                    <a href=""><li><img src="./images/fb.svg" height="35px"></li></a>
-                    <a href=""><li><img src="./images/insta.svg" height="35px"></li></a>
-                    <a href=""><li><img src="./images/reddit.svg" height="35px"></li></a>
+                    <a href="">
+                        <li><img src="./images/fb.svg" height="35px"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="./images/insta.svg" height="35px"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="./images/reddit.svg" height="35px"></li>
+                    </a>
                 </ul>
             </div>
             <div class="foot-sec">
@@ -109,5 +138,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="blockchain.js"></script>
 </body>
+
 </html>
