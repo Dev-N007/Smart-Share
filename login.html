@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="utils.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login-style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="utils.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login-style.css">
+  <style>
+    .flash {
+      padding: 1em;
+      background: #ffe5e5;
+      color: #b00020;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      list-style: none;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <div id="heading">
-            <p>Create An Account Or Login To Get Started</p>
-            <h1>Login</h1>
-            <p>Enter Your Details</p>
-        </div>
-        <form action="/login" method="post">                                                                                                               
-            <label for="email">Your E-mail*</label>
-            <br><br>
-            <input type="email" id="email" class="inputbox email" placeholder="Enter Your E-mail" required>
-            <br><br>
-            <label for="pwd">Your Password*</label>
-            <br><br>
-            <input type="password" id="pwd" class="inputbox pwd" placeholder="Enter Your Password" required>
-            <br><br>
-            <div class="btn-holder">
-                <button class="btn"><span>Continue</span></button>
-            </div>
-        </form>
-        <p>Don't have an account?<a href="signup.html">Signup Here</a></p>
-    </main>
+  <main>
+    <div id="heading">
+      <p>Create An Account Or Login To Get Started</p>
+      <h1>Login</h1>
+      <p>Enter Your Details</p>
+    </div>
+
+    <div id="messages"></div>
+
+    <form action="/login" method="post">
+      <label for="email">Your E-mail*</label>
+      <br><br>
+      <input type="email" name="email" id="email" class="inputbox email" placeholder="Enter Your E-mail" required>
+      <br><br>
+      <label for="pwd">Your Password*</label>
+      <br><br>
+      <input type="password" name="password" id="pwd" class="inputbox pwd" placeholder="Enter Your Password" required>
+      <br><br>
+      <div class="btn-holder">
+        <button class="btn"><span>Continue</span></button>
+      </div>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Signup Here</a></p>
+  </main>
+
+  <script>
+    fetch(window.location.href)
+      .then(res => res.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const success = doc.querySelector('.flash.success')?.outerHTML;
+        const error = doc.querySelector('.flash.error')?.outerHTML;
+        document.getElementById('messages').innerHTML = success || error || '';
+      });
+  </script>
 </body>
 </html>
